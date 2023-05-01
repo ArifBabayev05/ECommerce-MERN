@@ -14,9 +14,11 @@ function App() {
       <Route path="/" element={<HomePage/>}/>
       <Route path="/cart" element={<CartPage/>}/>
       <Route path="/product-detail" element={<ProductDetailsPage/>}/>
+      <Route path="/product-detail/:id" element={<ProductDetailsPage/>}/>
       <Route path="/products" element={<ProductListPage/>}/>
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/login" element={<LoginPage/>}/>
+      <Route path="*" element="Page not exist 404"/>
     </Routes>
     
 
