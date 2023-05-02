@@ -38,15 +38,15 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="*" element="Page not exist 404" />
+        </Route>
 
 
-          {/* User Protected Routes */}
-          <Route element={<ProtectedRoutesComponent admin={false} />}>
-            <Route path="/user" element={<UserProfilePage />} />
-            <Route path="/user/orders" element={<UserOrderPage />} />
-            <Route path="/user/order-details" element={<UserOrderDetailsPage />} />
-            <Route path="/user/cart-details" element={<UserCartDetailPage />} />
-          </Route>
+        {/* User Protected Routes */}
+        <Route element={<ProtectedRoutesComponent admin={false} />}>
+          <Route path="/user" element={<UserProfilePage />} />
+          <Route path="/user/orders" element={<UserOrderPage />} />
+          <Route path="/user/order-details" element={<UserOrderDetailsPage />} />
+          <Route path="/user/cart-details" element={<UserCartDetailPage />} />
         </Route>
 
         {/* Admin Protected Routes */}
