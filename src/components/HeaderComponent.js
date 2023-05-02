@@ -1,15 +1,57 @@
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import {
+  Navbar, Nav,
+  Container, NavDropdown,
+  Badge, Form,
+  Button, Dropdown,
+  DropdownButton, InputGroup
+}
+  from "react-bootstrap";
+
+import { LinkContainer } from 'react-router-bootstrap'
+
 
 const HeaderComponent = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <LinkContainer to="/">
+          <Navbar.Brand href="/">Online Shop</Navbar.Brand>
+        </LinkContainer>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
+            <InputGroup>
+              <DropdownButton
+                id="dropdown-basic-button"
+                title="All"
+              >
+                <Dropdown.Item >Electronics</Dropdown.Item>
+                <Dropdown.Item >Books</Dropdown.Item>
+                <Dropdown.Item >Cars</Dropdown.Item>
+
+              </DropdownButton>
+              <Form.Control type="text" placeholder="Search in shop..." />
+              <Button variant="warning">
+                <i className="bi bi-search"></i>
+              </Button>
+            </InputGroup>
+          </Nav>
+          <Nav>
+            <LinkContainer to="/admin/orders">
+              <Nav.Link>
+                Admin
+                <span className="position-absolute top-1 start-10 translate-middle p-2 bg-danger border border-light rounded-circle"></span>
+
+              </Nav.Link>
+            </LinkContainer>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#pricing">
+              <Badge pill bg="danger">
+                2
+              </Badge>
+              CART
+            </Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -21,12 +63,6 @@ const HeaderComponent = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
