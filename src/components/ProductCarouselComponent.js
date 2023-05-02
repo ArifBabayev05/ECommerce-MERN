@@ -7,7 +7,7 @@ const ProductCarouselComponent = () => {
         <Carousel>
             <Carousel.Item>
                 <img
-                    crossorigin="anonymous"
+                    crossOrigin="anonymous"
                     className="d-block w-100"
                     style={{ "height": "300", objectFit: "cover" }}
                     src="/images/carousel/carousel-1.png"
@@ -22,7 +22,7 @@ const ProductCarouselComponent = () => {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    crossorigin="anonymous"
+                    crossOrigin="anonymous"
                     className="d-block w-100"
                     style={{ "height": "300", objectFit: "cover" }}
                     src="/images/carousel/carousel-2.png"
@@ -38,7 +38,7 @@ const ProductCarouselComponent = () => {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    crossorigin="anonymous"
+                    crossOrigin="anonymous"
                     className="d-block w-100"
                     style={{ "height": "300", objectFit: "cover" }}
                     src="/images/carousel/carousel-3.png"

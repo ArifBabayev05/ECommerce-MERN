@@ -3,9 +3,18 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const CategoryCardComponent = () => {
+  const images = [
+    "/images/tablets-category.png",
+    "/images/tablets-category.png",
+    "/images/tablets-category.png",
+    "/images/tablets-category.png",
+    "/images/tablets-category.png",
+    "/images/tablets-category.png",
+    "/images/tablets-category.png",
+  ] 
   return (
-    <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" crossorigin="anonymous" src="/images/tablets-category.png" />
+    <Card>
+    <Card.Img variant="top" crossOrigin="anonymous" src="/images/tablets-category.png" />
     <Card.Body>
       <Card.Title>Card Title</Card.Title>
       <Card.Text>
