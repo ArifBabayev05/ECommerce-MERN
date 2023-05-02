@@ -1,5 +1,13 @@
-const HomePage = ()=>{
-    return <h1>Home Page</h1>
+import CategoryCardComponent from "../components/CategoryCardComponent"
+import ProductCarouselComponent from "../components/ProductCarouselComponent"
+
+const HomePage = () => {
+    return (
+        <>
+            <ProductCarouselComponent />
+            <CategoryCardComponent />
+        </>
+    )
 }
 
 export default HomePage
