@@ -20,31 +20,37 @@ import AdminOrdersPage from "./pages/admin/AdminOrdersPage";
 import AdminOrdersDetailPage from "./pages/admin/AdminOrdersDetailPage";
 import AdminChatsPage from "./pages/admin/AdminChatsPage";
 import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
+import HeaderComponent from "./components/HeaderComponent";
+import FooterComponent from "./components/FooterComponent";
+import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
 
 function App() {
   return (
     <BrowserRouter>
+      <HeaderComponent />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/product-detail" element={<ProductDetailsPage />} />
-        <Route path="/product-detail/:id" element={<ProductDetailsPage />} />
-        <Route path="/products" element={<ProductListPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element="Page not exist 404" />
+        <Route element={<RoutesWithUserChatComponent />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/product-detail" element={<ProductDetailsPage />} />
+          <Route path="/product-detail/:id" element={<ProductDetailsPage />} />
+          <Route path="/products" element={<ProductListPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="*" element="Page not exist 404" />
 
 
-        {/* User Protected Routes */}
-        <Route element={<ProtectedRoutesComponent admin={false} />}>
-          <Route path="/user" element={<UserProfilePage />} />
-          <Route path="/user/orders" element={<UserOrderPage />} />
-          <Route path="/user/order-details" element={<UserOrderDetailsPage />} />
-          <Route path="/user/cart-details" element={<UserCartDetailPage />} />
+          {/* User Protected Routes */}
+          <Route element={<ProtectedRoutesComponent admin={false} />}>
+            <Route path="/user" element={<UserProfilePage />} />
+            <Route path="/user/orders" element={<UserOrderPage />} />
+            <Route path="/user/order-details" element={<UserOrderDetailsPage />} />
+            <Route path="/user/cart-details" element={<UserCartDetailPage />} />
+          </Route>
         </Route>
 
         {/* Admin Protected Routes */}
-        <Route element={<ProtectedRoutesComponent admin={true}/>}>
+        <Route element={<ProtectedRoutesComponent admin={true} />}>
           <Route path="/admin/user" element={<AdminUserPage />} />
           <Route path="/admin/edit-user" element={<AdminEditUserPage />} />
           <Route path="/admin/products" element={<AdminProductsPage />} />
@@ -56,7 +62,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
-
+      <FooterComponent />
 
     </BrowserRouter>
   );
