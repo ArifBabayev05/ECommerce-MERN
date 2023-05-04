@@ -19,7 +19,7 @@ const HomePage = () => {
             <Container>
                 <Row xs={1} md={2} className="g-4 mt-5">
                     {
-                        categories.map((category,idx) => <CategoryCardComponent category={category} idx={idx}/>)
+                        categories.map((category,index) => <CategoryCardComponent key={index} category={category} index={index}/>)
                     }
                 </Row>
             </Container>
