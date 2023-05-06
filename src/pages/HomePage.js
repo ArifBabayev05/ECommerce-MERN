@@ -10,7 +10,6 @@ const HomePage = () => {
         'Monitors',
         'Games',
         'Software',
-        'Printers',
 
     ]
     return (
