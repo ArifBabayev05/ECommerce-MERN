@@ -23,10 +23,12 @@ import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
 import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
+import ScrollToTop from "./utils/ScrolToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <HeaderComponent />
       <Routes>
         <Route element={<RoutesWithUserChatComponent />}>
@@ -62,6 +64,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
+
       <FooterComponent />
 
     </BrowserRouter>

@@ -2,6 +2,8 @@ import { Row, Container } from "react-bootstrap"
 import CategoryCardComponent from "../components/CategoryCardComponent"
 import ProductCarouselComponent from "../components/ProductCarouselComponent"
 
+import { useLocation } from 'react-router-dom'
+
 const HomePage = () => {
     const categories = [
         'Tablets',
