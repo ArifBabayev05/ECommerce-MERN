@@ -1,12 +1,12 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { Rating, RatingView } from 'react-simple-star-rating'
 import { LinkContainer } from "react-router-bootstrap"
-const ProductForListComponent = () => {
+const ProductForListComponent = ({images,index}) => {
   return (
     <Card style={{ margin: "30px 0 50px 0" }}>
       <Row>
         <Col lg={5}>
-          <Card.Img variant="top" src="/images/tablets-category.png" />
+          <Card.Img variant="top" src={"/images/" + images[index]+ "-category.png"} />
         </Col>
         <Col lg={7}>
           <Card.Body>
