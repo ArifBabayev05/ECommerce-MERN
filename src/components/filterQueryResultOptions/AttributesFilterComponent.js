@@ -10,7 +10,6 @@ const AttributesFilterComponent = () => {
             <Form.Check
               key={idx}
               type="checkbox"
-              id="default-checkbox"
               label={i}
             />
           ))}
