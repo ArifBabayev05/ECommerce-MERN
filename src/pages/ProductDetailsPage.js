@@ -22,30 +22,30 @@ const ProductDetailsPage = () => {
                     <Row>
                         <Col md={8}>
                             <ListGroup variant="flush">
-                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                <ListGroup.Item><h1>Product Name</h1></ListGroup.Item>
                                 <ListGroup.Item>
-                                    <Rating readonly size={20} initialValue={4} /> (1)
+                                    <Rating readonly size={20} initialValue={4} /> (4)
                                 </ListGroup.Item>
-                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                <ListGroup.Item>Price <span className='fw-bold'>$200</span> </ListGroup.Item>
+                                <ListGroup.Item>Porta ac consectetur acPorta ac consectetur ac Porta ac consectetur ac Porta ac consectetur ac</ListGroup.Item>
                             </ListGroup>
                         </Col>
                         <Col md={4}>
                             <ListGroup>
-                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                                <ListGroup.Item>Status: In Stock</ListGroup.Item>
+                                <ListGroup.Item>Price <span className='fw-bold'>$200</span> </ListGroup.Item>
                                 <ListGroup.Item>
+                                    Quantity:
                                     <Form.Select size="lg" aria-label="Default select example">
-                                        <option>Open </option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
                                     </Form.Select>
                                 </ListGroup.Item>
                                 <ListGroup.Item>
-                                    <Button variant="danger">Danger</Button>
+                                    <Button variant="danger">Add to cart</Button>
                                 </ListGroup.Item>
-                                <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                             </ListGroup>
                         </Col>
                     </Row>
@@ -53,10 +53,9 @@ const ProductDetailsPage = () => {
                         <Col className="mt-5">
                             <h5>REVIEWS</h5>
                             <ListGroup variant="flush">
-                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                {Array.from({ length: 10 }).map((item, index) => (
+                                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                ))}
                             </ListGroup>
                         </Col>
                     </Row>
@@ -74,7 +73,7 @@ const ProductDetailsPage = () => {
                             <Form.Label>Example textarea</Form.Label>
                             <Form.Control as="textarea" rows={3} />
                         </Form.Group>
-                        
+
                         <Form.Select aria-label="Default select example">
                             <option>Open this select menu</option>
                             <option value="1">One</option>

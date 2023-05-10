@@ -1,5 +1,6 @@
 import { Alert, Button } from "react-bootstrap";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const AddedToCartMessageComponent = () => {
     const [show, setShow] = useState(true);
@@ -7,8 +8,10 @@ const AddedToCartMessageComponent = () => {
         <Alert show={show} variant="success" onClose={() => setShow(false)} dismissible>
             <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
             <p>
-                <Button variant="success">Go Back</Button>
-                <Button variant="danger">Go to Card</Button>
+                <Button variant="success">Go Back</Button> { " "}
+                <Link to="/cart">
+                <Button variant="danger">Go to Cart</Button>
+                </Link>
             </p>
         </Alert>
     );
