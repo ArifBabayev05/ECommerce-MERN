@@ -1,5 +1,13 @@
+import { Container, Row } from "react-bootstrap"
+
 const RegisterPage = ()=>{
-    return <h1>Register Page</h1>
+    return (
+        <Container>
+            <Row>
+        
+            </Row>
+        </Container>
+    )
 }
 
 export default RegisterPage
