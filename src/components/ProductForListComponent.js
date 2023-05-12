@@ -1,5 +1,5 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
-import { Rating, RatingView } from 'react-simple-star-rating'
+import { Rating } from 'react-simple-star-rating'
 import { LinkContainer } from "react-router-bootstrap"
 const ProductForListComponent = ({images,index}) => {
   return (
