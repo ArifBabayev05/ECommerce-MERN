@@ -88,6 +88,8 @@ const RegisterPage = () => {
                                 placeholder="Enter repeat password"
                                 name="confirmPassword"
                                 minLength={6}
+                                onChange={onChange}
+
                             />
                             <Form.Control.Feedback type='invalid'>Both passwords should match!</Form.Control.Feedback>
                         </Form.Group>
