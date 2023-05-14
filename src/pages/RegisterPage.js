@@ -4,6 +4,17 @@ import { Link } from "react-router-dom";
 const RegisterPage = () => {
     const [validated, setValidated] = useState(false);
 
+    const onChange = () => {
+        const password = document.querySelector("input[name=password]")
+        const confirmPassword = document.querySelector("input[name=confirmPassword]")
+
+        if (confirmPassword.value === password.value) {
+            confirmPassword.setCustomValidity("")
+        }
+        else {
+            confirmPassword.setCustomValidity("Password do not match!")
+        }
+    }
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -13,6 +24,7 @@ const RegisterPage = () => {
 
         setValidated(true);
     };
+
     return (
         <Container>
             <Row className="mt-5 justify-content-md-center">
@@ -62,6 +74,7 @@ const RegisterPage = () => {
                                 placeholder="Enter your password"
                                 name="password"
                                 minLength={6}
+                                onChange={onChange}
                             />
                             <Form.Control.Feedback type='invalid'>Please enter a valid password</Form.Control.Feedback>
                             <Form.Text className="text-muted">Password should have at least 6 characters</Form.Text>
