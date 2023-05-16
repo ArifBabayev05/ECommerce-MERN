@@ -1,4 +1,4 @@
-import { Container, Row, Col, InputGroup, Form, Button, Spinner, Alert } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Spinner, Alert } from "react-bootstrap";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const RegisterPage = () => {
